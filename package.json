@@ -7,12 +7,14 @@
     "buildNotRoot": "parcel build --public-url 'mosansa' src/*.html"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "autoprefixer": "^10.4.7",
     "daisyui": "^2.15.1",
     "flowbite": "^1.5.1",
     "parcel": "^2.6.0",
     "postcss": "^8.4.14",
     "postcss-purgecss": "^2.0.3",
+    "swiper": "^9.0.5",
     "tailwindcss": "^3.0.24"
   }
 }
