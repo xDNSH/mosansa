@@ -1,35 +1,90 @@
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper("#beritaswip", {
+	speed: 600,
+	loop: true,
+	autoplay: {
+		delay: 5000,
+		disableOnInteraction: true,
+	},
+	slidesPerView: "auto",
+	pagination: {
+		el: "#beritaswip > .swiper-pagination",
+		type: "bullets",
+		clickable: true,
+	},
+	breakpoints: {
+		320: {
+			slidesPerView: 1,
+			spaceBetween: 20,
+		},
+
+		1200: {
+			slidesPerView: 2,
+			spaceBetween: 20,
+		},
+	},
+	// Navigation arrows
+	navigation: {
+		nextEl: "#beritaswip > .swiper-button-next",
+		prevEl: "#beritaswip > .swiper-button-prev",
+	},
+});
+
+
+async function main() {
+	const response = await fetch(
+		"https://raw.githubusercontent.com/RPLSaci/mosansa/main/data/pengurus.txt"
+	);
+	const text = await response.text();
+	const data = text
+		.split("\n")
+		.filter((a) => a.length > 1)
+		.filter((a) => !a.includes("--"));
+    let html = ""
+	for (let i = 0; i < data.length; i++) {
+		const element = data[i];
+		const [nama, tipe, angkatan, jabatan] = element.split(" - ");
+		if (jabatan) {
+			html += `
+      <div class="swiper-slide flex">
+      <div class="card w-96 bg-base-100 shadow-xl m-auto">
+          <div class="card-body items-center text-center">
+              <h2 class="card-title">${nama}</h2>
+              <p>${jabatan} ${tipe} ${angkatan}</p>
+          </div>
+      </div>
+  </div>`;
+		}
+	}
+  document.querySelector("#data-struktur").innerHTML += html;
+  const swiper2 = new Swiper("#pengurus", {
     speed: 600,
     loop: true,
     autoplay: {
       delay: 5000,
-      disableOnInteraction: true
+      disableOnInteraction: true,
     },
-    slidesPerView: 'auto',
+    slidesPerView: "auto",
     pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
+      el: "#pengurus > .swiper-pagination",
+      type: "bullets",
+      clickable: true,
     },
     breakpoints: {
       320: {
         slidesPerView: 1,
-        spaceBetween: 20
+        spaceBetween: 20,
       },
-
+  
       1200: {
         slidesPerView: 2,
-        spaceBetween: 20
-      }
+        spaceBetween: 20,
+      },
     },
-        // Navigation arrows
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-        
-          // And if we need scrollbar
-          scrollbar: {
-            el: '.swiper-scrollbar',
-          },
+    // Navigation arrows
+    navigation: {
+      nextEl: "#pengurus > .swiper-button-next",
+      prevEl: "#pengurus > .swiper-button-prev",
+    },
   });
+}
+main();

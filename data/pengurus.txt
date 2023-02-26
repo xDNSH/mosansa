@@ -1,6 +1,9 @@
+// di bawah adalah konfig untuk website
+-- DATA-SHOW-INTI-59 --
+
 Livia Aulianti Azahra - MPK - 59 
 Alya Mira Asahy - MPK - 59
-Ghaitsa Jahira Sofa - MPK - 59 
+Ghaitsa Jahira Sofa - MPK - 59 - Bendahara 
 Rafly Rhafael - MPK - 59 - Ketua
 Tabina Marissa Putri - MPK - 59 
 Shofiyanti Qolbi - MPK - 59
@@ -11,7 +14,7 @@ Tia Nopiyanti - MPK - 59
 Muhamad Riky Suryadi - MPK - 59 
 Aleza Zafira Fathi Rofi - MPK - 59 - Wakil Ketua
 Laely Asyahidah - MPK - 59
-Vania Marshandika Izzati - MPK - 59
+Vania Marshandika Izzati - MPK - 59 - Bendahara
 Gilang Septa Aryadi - MPK - 59
 Nasywa Dyah Andani - MPK - 59 - Sekretaris
 Galuh Putriana Alicia - MPK - 59 - Sekretaris
