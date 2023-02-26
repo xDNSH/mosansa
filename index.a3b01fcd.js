@@ -1,2 +1,0 @@
-const swiper=new Swiper(".swiper",{speed:600,loop:!0,autoplay:{delay:5e3,disableOnInteraction:!0},slidesPerView:"auto",pagination:{el:".swiper-pagination",type:"bullets",clickable:!0},breakpoints:{320:{slidesPerView:1,spaceBetween:20},1200:{slidesPerView:2,spaceBetween:20}},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},scrollbar:{el:".swiper-scrollbar"}});
-//# sourceMappingURL=index.a3b01fcd.js.map
