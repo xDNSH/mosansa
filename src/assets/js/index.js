@@ -40,10 +40,13 @@ async function main() {
 		.filter((a) => a.length > 1)
 		.filter((a) => !a.includes("--"));
     let html = ""
-	for (let i = 0; i < data.length; i++) {
+
+  let showingPengurus = text.split("\n").filter((a) => a.includes("INTI"))
+  const inti = showingPengurus[0].split("-")[5].trim()
+  for (let i = 0; i < data.length; i++) {
 		const element = data[i];
 		const [nama, tipe, angkatan, jabatan] = element.split(" - ");
-		if (jabatan) {
+		if (jabatan && angkatan === inti) {
 			html += `
       <div class="swiper-slide flex">
       <div class="card w-96 bg-base-100 shadow-xl m-auto">
