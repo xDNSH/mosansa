@@ -16,7 +16,7 @@ async function main() {
 		const element = data[i];
 		const [nama, tipe, angkatan] = element.split(" - ");
 			html += `
-      <div class="card w-96 bg-base-100 shadow-xl m-auto">
+      <div class="card lg:w-96 w-80 bg-base-100 shadow-xl m-auto">
           <div class="card-body items-center text-center">
               <h2 class="card-title">${nama}</h2>
               <p>${tipe} ${angkatan}</p>
@@ -24,6 +24,9 @@ async function main() {
   </div>`;
 	}
   document.querySelector("#data-struktur").innerHTML += html;
+  const swiper = new Swiper("#data-struktur", {
+    horizontal: true,
+  });
 
 }
 
