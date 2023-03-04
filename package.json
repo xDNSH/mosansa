@@ -2,7 +2,7 @@
   "name": "mosansa",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel src/*.html",
+    "dev": "parcel src/*.html --no-cache",
     "build": "parcel build src/*.html",
     "buildToSch": "parcel build --public-url /mosansa/ src/*.html src/**/*.html",
     "buildNotRoot": "parcel build --public-url 'mosansa' src/*.html"
