@@ -51,8 +51,14 @@
 </header>
 
 <body class="pt-12">
-    <section class="w-full pt-10 min-h-screen bg-cover bg-center" style="background-image: url('../assets/img/background.jpg')" id="data-struktur">
-    </section>
+    <!-- <section class="w-full pt-10 min-h-screen bg-cover bg-center" style="background-image: url('../assets/img/background.jpg')" id="data-struktur">
+
+    </section> -->
+    <section>
+        <div class="relative" style="background-image: url('../assets/img/background.jpg')" id="data-struktur">
+          <div class="absolute inset-0 bg-gray-800 opacity-50 z-0"></div>
+        </div>
+        </section>
 
     <button data-collapse-toggle="navbar-sticky" type="button"
         class="fixed bottom-0 inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -97,10 +103,10 @@
   <div class="grid lg:grid-rows-2 h-[50vh] grid-rows-1 gap-4 h-screen overflow-x-scroll grid-flow-col">
     <span class="text-lg">Angkatan</span>
 </div>
-    <div class="grid pt-24 grid-cols-2  gap-4">
+    <div class="grid pt-24 grid-cols-2  gap-4 z-1">
         <div class="card lg:w-96 w-80 bg-base-100 shadow-xl m-auto">
             <div class="card-body items-center text-center">
-                <h2 class="card-title">${nama}</h2>
+                <h2 class="card-title pt-12">${nama}</h2>
                 <p>${tipe} ${angkatan}</p>
             </div>
         </div>
