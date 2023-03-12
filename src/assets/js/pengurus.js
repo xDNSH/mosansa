@@ -38,6 +38,7 @@ async function main() {
         </div>
     `;
     }
+    
     document.querySelector("#data-struktur").innerHTML += `
     <div class="text-3xl text-white text-center z-1 pt-12">Angkatan ${element}</div>
     <div class="grid grid-rows-1 gap-4 h-[50vh] overflow-x-scroll grid-flow-col z-1">

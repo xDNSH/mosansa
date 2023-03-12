@@ -1,10 +1,14 @@
 // di bawah adalah konfig untuk website
 -- DATA-SHOW-INTI-59 --
 
+Rafly Rhafael - MPK - 59 - Ketua
+Aleza Zafira Fathi Rofi - MPK - 59 - Wakil Ketua
+Nasywa Dyah Andani - MPK - 59 - Sekretaris
+Galuh Putriana Alicia - MPK - 59 - Sekretaris
+Ghaitsa Jahira Sofa - MPK - 59 - Bendahara 
+Vania Marshandika Izzati - MPK - 59 - Bendahara
 Livia Aulianti Azahra - MPK - 59 
 Alya Mira Asahy - MPK - 59
-Ghaitsa Jahira Sofa - MPK - 59 - Bendahara 
-Rafly Rhafael - MPK - 59 - Ketua
 Tabina Marissa Putri - MPK - 59 
 Shofiyanti Qolbi - MPK - 59
 Chelsea Meilani Limbong - MPK - 59
@@ -12,20 +16,18 @@ Gita Putri Dinargintana - MPK - 59
 Najla Haura Hafizah - MPK - 59
 Tia Nopiyanti - MPK - 59
 Muhamad Riky Suryadi - MPK - 59 
-Aleza Zafira Fathi Rofi - MPK - 59 - Wakil Ketua
 Laely Asyahidah - MPK - 59
-Vania Marshandika Izzati - MPK - 59 - Bendahara
 Gilang Septa Aryadi - MPK - 59
-Nasywa Dyah Andani - MPK - 59 - Sekretaris
-Galuh Putriana Alicia - MPK - 59 - Sekretaris
 
+Chatrine Cahaya Mykino - OSIS - 59 - Ketua
+Arya Rizki Rahmatuloh - OSIS - 59 - Wakil Ketua
+Aurellityas Ar Rahmat - OSIS - 59 - Sekretaris
+Tedy Kusuma Hidayat - OSIS - 59 - Sekretaris
+Anisa Dinda Suteja - OSIS - 59 - Bendahara
+Tifani Azahra - OSIS - 59 - Bendahara
 Ahmad Hidayat Rifki - OSIS - 59 
 Ahmad Nikolas Adiputra - OSIS - 59 
-Anisa Dinda Suteja - OSIS - 59 - Bendahara
 Audrey Widya Anjani Devi - OSIS - 59 
-Aurellityas Ar Rahmat - OSIS - 59 - Sekretaris
-Arya Rizki Rahmatuloh - OSIS - 59 - Wakil Ketua
-Chatrine Cahaya Mykino - OSIS - 59 - Ketua
 Fitri Nuradila - OSIS - 59 
 Melinda Handayani - OSIS - 59 
 Nur Aulia fitri - OSIS - 59 
@@ -34,9 +36,7 @@ Regita Aulia Sa'adah - OSIS - 59
 Salshabila azara putri n  - OSIS - 59 
 Silvi Indriani Alfriadi - OSIS - 59 
 Siti Balqis Haura - OSIS - 59 
-Tedy Kusuma Hidayat - OSIS - 59 - Sekretaris
 Thofa Hanif Aditya - OSIS - 59 
-Tifani Azahra - OSIS - 59 - Bendahara
 Muhammad alif dimas putra - OSIS - 59 
 
 --SEPERATOR ANGKATAN--
