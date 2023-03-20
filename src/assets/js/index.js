@@ -1,33 +1,4 @@
-const swiper = new Swiper("#beritaswip", {
-	speed: 600,
-	loop: true,
-	autoplay: {
-		delay: 5000,
-		disableOnInteraction: true,
-	},
-	slidesPerView: "auto",
-	pagination: {
-		el: "#beritaswip > .swiper-pagination",
-		type: "bullets",
-		clickable: true,
-	},
-	breakpoints: {
-		320: {
-			slidesPerView: 1,
-			spaceBetween: 20,
-		},
 
-		1200: {
-			slidesPerView: 2,
-			spaceBetween: 20,
-		},
-	},
-	// Navigation arrows
-	navigation: {
-		nextEl: "#beritaswip > .swiper-button-next",
-		prevEl: "#beritaswip > .swiper-button-prev",
-	},
-});
 
 
 async function main() {
@@ -45,11 +16,13 @@ async function main() {
 
   let showingPengurus = text.split("\n").filter((a) => a.includes("INTI"))
   const inti = showingPengurus[0].split("-")[5].trim()
+  let htmlmpk = ``
+  let htmlosis = ``
   for (let i = 0; i < data.length; i++) {
 		const element = data[i];
 		const [nama, tipe, angkatan, jabatan] = element.split(" - ");
-		if (jabatan && angkatan === inti) {
-			html += `
+		if (jabatan && angkatan === inti && tipe === "MPK") {
+			htmlmpk += `
       <div class="swiper-slide flex">
       <div class="card w-96 bg-mpk shadow-xl m-auto">
           <div class="card-body items-center text-center">
@@ -58,9 +31,19 @@ async function main() {
           </div>
       </div>
   </div>`;
-		}
+		} else if (jabatan && angkatan === inti && tipe === "OSIS") {
+      htmlosis += `
+      <div class="swiper-slide flex">
+      <div class="card w-96 bg-mpk shadow-xl m-auto">
+          <div class="card-body items-center text-center">
+              <h2 class="card-title">${nama}</h2>
+              <p>${jabatan} ${tipe} ${angkatan}</p>
+          </div>
+      </div>
+  </div>`;
+    }
 	}
-  document.querySelector("#pengurus-mpk > #data-struktur").innerHTML += html;
+  document.querySelector("#pengurus-mpk > #data-struktur").innerHTML += htmlmpk;
   const swiper2 = new Swiper("#pengurus-mpk", {
     speed: 600,
     loop: true,
@@ -70,7 +53,7 @@ async function main() {
     },
     slidesPerView: "auto",
     pagination: {
-      el: "#pengurus > .swiper-pagination",
+      el: "#pengurus-mpk > .swiper-pagination",
       type: "bullets",
       clickable: true,
     },
@@ -87,8 +70,39 @@ async function main() {
     },
     // Navigation arrows
     navigation: {
-      nextEl: "#pengurus > .swiper-button-next",
-      prevEl: "#pengurus > .swiper-button-prev",
+      nextEl: "#pengurus-mpk > .swiper-button-next",
+      prevEl: "#pengurus-mpk > .swiper-button-prev",
+    },
+  });
+  document.querySelector("#pengurus-osis > #data-struktur").innerHTML += htmlosis;
+  const swiper3 = new Swiper("#pengurus-osis", {
+    speed: 600,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: true,
+    },
+    slidesPerView: "auto",
+    pagination: {
+      el: "#pengurus-osis > .swiper-pagination",
+      type: "bullets",
+      clickable: true,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+  
+      1200: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+    },
+    // Navigation arrows
+    navigation: {
+      nextEl: "#pengurus-osis > .swiper-button-next",
+      prevEl: "#pengurus-osis > .swiper-button-prev",
     },
   });
 }
@@ -132,4 +146,58 @@ async function load(data) {
 
 </div>
 `
+}
+
+Berita()
+async function Berita() {
+  let data = await fetch("https://raw.githubusercontent.com/RPLSaci/featOsis-Event/main/events/mainMenu.json")
+  let json = await data.json()
+
+  let html = ""
+  for(let i =0;i < json.length;i++){
+    let item = json[i]
+    console.log(item)
+    html+=`
+    <div class="swiper-slide flex">
+    <div class="card w-96 bg-osis shadow-xl m-auto">
+        <figure class="px-10 pt-10">
+            <img src="https://raw.githubusercontent.com/RPLSaci/featOsis-Event/main/events/${item.img}" class="rounded-xl" />
+        </figure>
+        <div class="card-body items-center text-center">
+            <a class="card-title" href="./event/baca?id=${item.id}">${item.nama}</a>
+        </div>
+    </div>
+</div>`
+  }
+  document.querySelector("#berita-slide").innerHTML += html 
+  const swiper = new Swiper("#beritaswip", {
+    speed: 600,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: true,
+    },
+    slidesPerView: "auto",
+    pagination: {
+      el: "#beritaswip > .swiper-pagination",
+      type: "bullets",
+      clickable: true,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+  
+      1200: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+    },
+    // Navigation arrows
+    navigation: {
+      nextEl: "#beritaswip > .swiper-button-next",
+      prevEl: "#beritaswip > .swiper-button-prev",
+    },
+  });
 }
