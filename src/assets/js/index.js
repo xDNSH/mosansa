@@ -158,9 +158,9 @@ async function Berita() {
     let item = json[i]
     console.log(item)
     html+=`
-    <div class="swiper-slide flex">
+    <div class="swiper-slide flex w-96">
     <div class="card w-96 bg-osis shadow-xl m-auto">
-        <figure class="px-10 pt-10">
+        <figure class="">
             <img src="https://raw.githubusercontent.com/RPLSaci/featOsis-Event/main/events/${item.img}" class="rounded-xl" />
         </figure>
         <div class="card-body items-center text-center">
