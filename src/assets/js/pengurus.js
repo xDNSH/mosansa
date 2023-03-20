@@ -21,6 +21,7 @@ async function main() {
     }
 	}
     // resort to be from higher to lower
+    let bg = "mpk"
     angkatanList.sort((a, b) => a-b);
 	for (let i = 0; i < angkatanList.length; i++) {
     const element = angkatanList[i];
@@ -30,7 +31,7 @@ async function main() {
       const element = showing[j];
       const [nama, tipe, angkatan] = element.split(" - ");
       curHtml += `
-        <div class="card lg:w-96 w-80 bg-base-100 shadow-xl m-auto">
+        <div class="card lg:w-96 w-80 bg-${bg} shadow-xl m-auto">
            <div class="card-body items-center text-center">
                 <h2 class="card-title">${nama}</h2>
                 <p>${tipe} ${angkatan}</p>
@@ -38,13 +39,17 @@ async function main() {
         </div>
     `;
     }
+  bg = bg === "osis" ? "mpk" : "osis"
     
     document.querySelector("#data-struktur").innerHTML += `
+    <div class="swiper-slide bg-${bg}">
     <div class="text-3xl text-white text-center z-1 pt-12">Angkatan ${element}</div>
-    <div class="grid grid-rows-1 gap-4 h-[50vh] overflow-x-scroll grid-flow-col z-1">
-  ${curHtml}
-  </div>
-  `;
+      <div class="grid grid-rows-1 gap-4 h-[50vh] overflow-x-scroll text-white grid-flow-col z-1">
+        ${curHtml}
+      </div>
+    </div>
+    </div>
+  `
 
   }
 	// document.querySelector("#data-struktur").innerHTML += `
