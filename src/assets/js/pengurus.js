@@ -21,7 +21,7 @@ async function main() {
     }
 	}
     // resort to be from higher to lower
-    angkatanList.sort((a, b) => b - a);
+    angkatanList.sort((a, b) => a-b);
 	for (let i = 0; i < angkatanList.length; i++) {
     const element = angkatanList[i];
     let curHtml = ""
