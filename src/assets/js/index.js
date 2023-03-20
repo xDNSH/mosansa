@@ -51,7 +51,7 @@ async function main() {
 		if (jabatan && angkatan === inti) {
 			html += `
       <div class="swiper-slide flex">
-      <div class="card w-96 bg-base-100 shadow-xl m-auto">
+      <div class="card w-96 bg-mpk shadow-xl m-auto">
           <div class="card-body items-center text-center">
               <h2 class="card-title">${nama}</h2>
               <p>${jabatan} ${tipe} ${angkatan}</p>
@@ -106,31 +106,30 @@ async function load(data) {
   let ammoutOsis = data.filter((a) => a.includes("OSIS")).length
   let masabakti = (new Date().getFullYear() - 1) + " - " + new Date().getFullYear()
   document.querySelector("#info").innerHTML +=`
-  <div class="grid lg:grid-cols-5 md:grid-cols-2 sm:grid-cols-2 gap-4">
-  <div class="text-center p-4">
-      <span data-purecounter-start="0" data-purecounter-end="${data.length}"
-          class="purecounter block text-4xl font-bold">${data.length}</span>
-      <p class="text-base">Anggota</p>
-  </div>
+  <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4">
   <div class="text-center p-4">
       <span class="block text-4xl font-bold">${masabakti}</span>
       <p class="text-base">Masa Bakti</p>
   </div>
+
+  <div class="text-center p-4">
+  <span data-purecounter-start="0" data-purecounter-end="${ammoutMPK}"
+      class="purecounter block text-4xl font-bold">${ammoutMPK}</span>
+  <p class="text-base">Pengurus MPK</p>
+</div>
+<div class="text-center p-4">
+  <span data-purecounter-start="0" data-purecounter-end="${ammoutOsis}"
+      class="purecounter block text-4xl font-bold">${ammoutOsis}</span>
+  <p class="text-base">Pengurus Osis</p>
+</div>
+
+
   <div class="text-center p-4">
       <span data-purecounter-start="0" data-purecounter-end="10"
           class="purecounter block text-4xl font-bold">10</span>
       <p class="text-base">Total Sekbid Osis</p>
   </div>
-  <div class="text-center p-4">
-      <span data-purecounter-start="0" data-purecounter-end="${ammoutMPK}"
-          class="purecounter block text-4xl font-bold">${ammoutMPK}</span>
-      <p class="text-base">Anggota Pengurus MPK</p>
-  </div>
-  <div class="text-center p-4">
-      <span data-purecounter-start="0" data-purecounter-end="${ammoutOsis}"
-          class="purecounter block text-4xl font-bold">${ammoutOsis}</span>
-      <p class="text-base">Anggota Pengurus Osis</p>
-  </div>
+
 </div>
 `
 }

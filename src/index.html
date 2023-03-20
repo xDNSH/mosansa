@@ -13,25 +13,26 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
     <script src="./assets/js/index.js" defer></script>
 </head>
+
 <header>
     <nav
-        class="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+        class="px-2 sm:px-4 py-2.5 bg-mpk-600 fixed w-full z-20 top-0 left-0 border-b border-mpk-200">
         <div class="container flex flex-wrap items-center justify-between mx-auto">
-            <a href="https://sman1cikampek.sch.id/mosansa" class="flex items-center">
+            <a href="/" class="flex items-center">
                 <img src="./assets/img/logo.png" class="h-6 mr-3 sm:h-9" alt="MOSANSA Logo">
-                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">MOSANSA</span>
+                <span class="self-center text-xl font-semibold whitespace-nowrap text-white">MOSANSA</span>
             </a>
             <div class="flex md:order-2">
                 <button type="button"
-                    class="self-center ml-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login</button>
+                    class="self-center ml-4 text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 bg-osis focus:ring-blue-800">Login</button>
             </div>
             <div class="font-bold items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
                 id="navbar-sticky">
                 <ul
-                    class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    class="flex flex-col p-4 mt-4 border border-osis-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 ">
                     <li>
                         <a href="#"
-                            class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+                            class="block py-2 pl-3 pr-4 text-white bg-mpk rounded md:bg-transparent text-mpk-50 md:p-0"
                             aria-current="page">Home</a>
                     </li>
                     <li>
@@ -49,7 +50,7 @@
     </nav>
 </header>
 
-<body class="pt-14">
+<body class="pt-14 text-white">
     <section id="hero" data-aos="fade-up" class="flex justify-center items-center w-full h-screen bg-cover bg-center"
         style="background-image: url('./assets/img/background.jpg');">
         <div class="container" data-aos="zoom-in" data-aos-delay="100">
@@ -60,7 +61,7 @@
             </div>
         </div>
     </section>
-    <section id="mpk" class="mt-4 p-4" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+    <section id="mpk" class="bg-mpk p-4 " data-aos="fade-up" data-aos-anchor-placement="center-bottom">
         <div class="container w-[90%] mx-auto animate__animated animate__fadeUp">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                 <div class="order-2">
@@ -69,17 +70,14 @@
                 <div class="order-1">
                     <h3 class="text-3xl text-center lg:text-left font-bold">Apa itu MPK SMAN 1 Cikampek</h3>
                     <p class="italic mt-4">
-                        MPK (Majelis Perwakilan Kelas) di SMA Negeri 1 Cikampek merupakan organisasi yang dibentuk untuk
-                        memperjuangkan kepentingan dan kesejahteraan siswa. MPK terdiri dari perwakilan setiap kelas di
-                        sekolah dan bertugas untuk menyampaikan aspirasi serta mengatur acara-acara di SMA Negeri 1
-                        Cikampek.
+                        MPK (Majelis Perwakilan Kelas) merupakan Organisasi yang tingkatannya berada di atas OSIS dan bertanggungjawab untuk mengawasi dan mengevaluasi kinerja OSIS selama masa tugasnya. MPK berisikan para perwakilan dari setiap kelas yang berperan sebagai penampung dan penyalur aspirasi siswa/i.
                     </p>
                 </div>
             </div>
         </div>
     </section>
-    <section id="osis" class="bg-base-200 mt-4 p-4">
-        <div class="container w-[90%] mx-auto mb-4" data-aos="fade-up" data-aos-anchor-placement="top-center">
+    <section id="osis" class="bg-osis mt-4 p-4 mt-[-1.5rem] pt-12 " data-aos="fade-up">
+        <div class="container w-[90%] mx-auto mb-4 animate__animated animate__fadeUp">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                 <div class="order-1">
                     <img src="./assets/img/osis.png" class="w-[60%] mx-auto" alt="">
@@ -99,12 +97,12 @@
             </div>
         </div>
     </section>
-    <div class="p-12 mx-auto bg-base-100 mt-4" id="info" data-aos="fade-down">
+    <div class="p-12 mx-auto bg-base-100 mt-4 bg-mpk mt-[-1.5rem] pt-12" id="info" data-aos="fade-down">
 
     </div>
-    <section id="struktur" class="mt-4">
-        <div class="swiper bg-base-200 !z-0" id="pengurus">
-            <h2 class="mt-4 font-bold lg:text-4xl mb-4 text-center text-2xl">Pengurus Inti MPK-OSIS SMAN 1 Cikampek</h2>
+    <section id="struktur" class=" bg-osis mt-4 mt-[-1.5rem] pt-12 pb-10" data-aos="fade-left">
+        <div class="swiper !z-0" id="pengurus">
+            <h2 class="mt-4 font-bold lg:text-4xl mb-4 text-center lg:text-2xl text-xl">Pengurus Inti MPK-OSIS SMAN 1 Cikampek</h2>
             <div class="swiper-wrapper !h-[35vh]" id="data-struktur">
 
             </div>
@@ -112,14 +110,14 @@
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
-        <a href="./pengurus/index.html" class="flex m-auto w- btn btn-primary">Lihat Sepenuhnya</a>
+        <a href="./pengurus/index.html" class="flex m-auto w-[75%] btn btn-primary">Lihat Sepenuhnya</a>
     </section>
-    <section id="berita" class="mt-4">
-        <div class="swiper bg-base-100 !z-0" id="beritaswip">
+    <section id="berita" data-aos="fade-right">
+        <div class="swiper bg-base-100 bg-mpk !z-0 pb-12" id="beritaswip">
             <h2 class="mt-4 font-bold text-4xl mb-4 text-center">Event</h2>
             <div class="swiper-wrapper !h-[80vh]">
                 <div class="swiper-slide flex">
-                    <div class="card w-96 bg-base-100 shadow-xl m-auto">
+                    <div class="card w-96 bg-osis shadow-xl m-auto">
                         <figure class="px-10 pt-10">
                             <img src="./assets/img/mo.png" class="rounded-xl" />
                         </figure>
@@ -127,13 +125,13 @@
                             <h2 class="card-title">Funkasa</h2>
                             <p>Unjuk Karya yang di buat demi memenuhi penguatan profil pelajar pancasila</p>
                             <div class="card-actions">
-                                <button class="btn btn-primary">Baca</button>
+                                <button class="btn bg-mpk text-white">Baca</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-slide flex">
-                    <div class="card w-96 bg-base-100 shadow-xl m-auto">
+                    <div class="card w-96 bg-osis shadow-xl m-auto">
                         <figure class="px-10 pt-10">
                             <img src="./assets/img/mo.png" class="rounded-xl" />
                         </figure>
@@ -141,13 +139,13 @@
                             <h2 class="card-title">Funkasa</h2>
                             <p>Unjuk Karya yang di buat demi memenuhi penguatan profil pelajar pancasila</p>
                             <div class="card-actions">
-                                <button class="btn btn-primary">Baca</button>
+                                <button class="btn bg-mpk text-white">Baca</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-slide flex">
-                    <div class="card w-96 bg-base-100 shadow-xl m-auto">
+                    <div class="card w-96 bg-osis shadow-xl m-auto">
                         <figure class="px-10 pt-10">
                             <img src="./assets/img/mo.png" class="rounded-xl" />
                         </figure>
@@ -155,7 +153,7 @@
                             <h2 class="card-title">Funkasa</h2>
                             <p>Unjuk Karya yang di buat demi memenuhi penguatan profil pelajar pancasila</p>
                             <div class="card-actions">
-                                <button class="btn btn-primary">Baca</button>
+                                <button class="btn bg-mpk text-white">Baca</button>
                             </div>
                         </div>
                     </div>
@@ -167,7 +165,7 @@
         </div>
     </section>
     <button data-collapse-toggle="navbar-sticky" type="button"
-        class="fixed bottom-0 inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        class="fixed bottom-0 inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 text-gray-400 hover:bg-gray-700 focus:ring-gray-600"
         aria-controls="navbar-sticky" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
         <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
@@ -188,7 +186,7 @@
     </script>
 
 </body>
-<footer class="footer p-10 bg-neutral text-neutral-content">
+<footer class="footer bg-osis text-white border-osis-100 p-10 text-neutral-content">
     <div>
         <img src="./assets/img/mo.png" width="75">
         <span class="text-lg font-bold">MPK-OSIS SMAN 1 Cikampek</span>
