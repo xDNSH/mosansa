@@ -60,8 +60,8 @@ async function main() {
   </div>`;
 		}
 	}
-  document.querySelector("#data-struktur").innerHTML += html;
-  const swiper2 = new Swiper("#pengurus", {
+  document.querySelector("#pengurus-mpk > #data-struktur").innerHTML += html;
+  const swiper2 = new Swiper("#pengurus-mpk", {
     speed: 600,
     loop: true,
     autoplay: {
