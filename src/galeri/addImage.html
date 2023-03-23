@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <script src="../../node_modules/flowbite/dist/flowbite.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
-    <script src="../assets/js/pengurus.js" defer></script>
+    <script src="../assets/js/galeri.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/datepicker.min.js" defer></script>
 </head>
 <header>
     <nav
@@ -21,7 +22,7 @@
                 <span class="self-center text-xl font-semibold whitespace-nowrap text-white">MOSANSA</span>
             </a>
             <div class="flex md:order-2">
-                <a href="../login.html" type="button"
+                <a type="button" href="../login.html"
                     class="self-center ml-4 text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 bg-osis focus:ring-blue-800">Login</a>
             </div>
             <div class="font-bold items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
@@ -37,7 +38,7 @@
                         <a href="#" class="link-nav">Event</a>
                     </li>
                     <li>
-                        <a href="../galeri/index.html" class="link-nav">Galeri</a>
+                        <a href="#" class="link-nav">Galeri</a>
                     </li>
                     <li>
                         <a href="../pengurus/index.html" class="link-nav">Pengurus MOSANSA</a>
@@ -48,14 +49,71 @@
     </nav>
 </header>
 
-<body class="pt-12 h-min-screen">
-    <!-- <section class="w-full pt-10 min-h-screen bg-cover bg-center" style="background-image: url('../assets/img/background.jpg')" id="data-struktur">
+<body class="pt-12">
+    <div class="min-h-screen" id="wrapper">
+        <div class="card mt-60 lg:w-96 w-72 m-auto bg-osis shadow-xl">
+            <div class="form-control m-auto mt-12 rounded-xl w-[80%]">
+                <label class="input-group bg-mpk">
+                  <span class="bg-mpk-600">Nama Acara</span>
+                  <input type="text" id="namaAcara" placeholder="Nama Acara" class="bg-mpk lg:w-auto w-40 input input-bordered" />
+                </label>
+              </div>
+                <div class="form-control m-auto mt-8 rounded-xl w-[80%]">
+                    <button data-tooltip-target="tooltip-default" type="button" class="text-white bg-mpk-700 hover:bg-mpk-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-blue-800">Baca</button>
+                    <div id="tooltip-default" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                        Link harus berupa link drive, contoh https://drive.google.com/drive/folders/1BBpO1FEZMC1UHOfECL1q-Ds6isGRm8U3
+                        <div class="tooltip-arrow" data-popper-arrow></div>
+                    </div>
+                    <label class="input-group bg-mpk">
+                    <span class="bg-mpk-600">Link</span>
+                    <input type="text" id="link" placeholder="Link Drive" class="bg-mpk lg:w-auto w-40 input input-bordered" />
+                    </label>
+                </div>
+                <div class="form-control m-auto mt-8 rounded-xl w-[80%]">
+                    <label class="input-group bg-mpk">
+                    <span class="bg-mpk-600">Deskripsi</span>
+                    <input type="text" id="deskripsi" placeholder="Deskripsi" class="overflow-x-hidden bg-mpk lg:w-auto w-40 input input-bordered" />
+                    </label>
+                </div>
+                <div class="form-control m-auto mt-8 rounded-xl w-[80%]">
+                    <button data-tooltip-target="tooltip1" type="button" class="text-white bg-mpk-700 hover:bg-mpk-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-blue-800">Baca</button>
+                    <div id="tooltip1" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                        Id adalah sesuatu yang akan digunakan untuk mengakses acara, contoh "funkasa2023"
+                        <div class="tooltip-arrow" data-popper-arrow></div>
+                    </div>
+                    <label class="input-group bg-mpk">
+                    <label class="input-group bg-mpk">
+                    <span class="bg-mpk-600">Id Acara</span>
+                    <input type="text" id="idAcara" placeholder="ID acara" class="bg-mpk lg:w-auto w-40 input input-bordered" />
+                    </label>
+                </div>
+                <div class="relative max-w-sm w-[80%] m-auto mt-12">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                    <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <input id="date" datepicker datepicker-buttons type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
+                </div>
+                
+                <div class="form-control m-auto mt-12 rounded-xl">
+                    <button class="btn btn-primary bg-mpk hover:bg-mpk-200" onclick="submit()">Submit</button>
+                </div>
 
-    </section> -->
-    <section class="min-h-screen">
-        <div class="relative" style="background-image: url('../assets/img/background.jpg')" id="data-struktur">
         </div>
-    </section>
+
+        <div class="w-full overflow-x-auto mx-auto">
+            <table id="acara-table" class="mx-auto text-gray-700 bg-white sm:table-auto">
+                <thead class="text-left font-medium bg-gray-200">
+                <tr>
+                  <th class="px-4 py-2 sm:text-center sm:px-2 sm:py-1">Nama</th>
+                  <th class="px-4 py-2 sm:text-center sm:px-2 sm:py-1">Id</th>
+                  <th class="px-4 py-2 sm:text-center sm:px-2 sm:py-1">Link</th>
+                  <th class="px-4 py-2 sm:text-center sm:px-2 sm:py-1">Tanggal</th>
+                  <th class="px-4 py-2 sm:text-center sm:px-2 sm:py-1">Delete</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+    </div>
 
     <button data-collapse-toggle="navbar-sticky" type="button"
         class="fixed bottom-0 inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -69,10 +127,10 @@
         </svg>
     </button>
 
-    <!-- <script src="../../node_modules/aos/dist/aos.js"></script>
+    <script src="../../node_modules/aos/dist/aos.js"></script>
     <script>
         AOS.init();
-    </script> -->
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
     <script>
         new PureCounter();
@@ -97,17 +155,7 @@
 </footer>
 
 <div class="hidden PLACEHOLDER">
-  <div class="grid lg:grid-rows-2 h-[50vh] grid-rows-1 gap-4 h-screen overflow-x-scroll grid-flow-col">
-    <span class="text-lg">Angkatan</span>
-</div>
-    <div class="grid pt-24 grid-cols-2  gap-4 z-1">
-        <div class="card lg:w-96 w-80 bg-base-100 shadow-xl m-auto">
-            <div class="card-body items-center text-center">
-                <h2 class="card-title pt-12">${nama}</h2>
-                <p>${tipe} ${angkatan}</p>
-            </div>
-        </div>
-    </div>
+<div class="btn btn-primary"></div>
 </div>
 
 </html>

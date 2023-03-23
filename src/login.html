@@ -2,34 +2,36 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MPK - OSIS SMAN 1 CIKAMPEK</title>
-    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="../node_modules/aos/dist/aos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <script src="../../node_modules/flowbite/dist/flowbite.min.js" defer></script>
+    <script src="../node_modules/flowbite/dist/flowbite.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
-    <script src="../assets/js/pengurus.js" defer></script>
+    <script src="./assets/js/login.js" defer></script>
 </head>
+
 <header>
     <nav
         class="px-2 sm:px-4 py-2.5 bg-mpk-600 fixed w-full z-20 top-0 left-0 border-b border-mpk-200">
         <div class="container flex flex-wrap items-center justify-between mx-auto">
             <a href="/" class="flex items-center">
-                <img src="../assets/img/logo.png" class="h-6 mr-3 sm:h-9" alt="MOSANSA Logo">
+                <img src="./assets/img/logo.png" class="h-6 mr-3 sm:h-9" alt="MOSANSA Logo">
                 <span class="self-center text-xl font-semibold whitespace-nowrap text-white">MOSANSA</span>
             </a>
             <div class="flex md:order-2">
-                <a href="../login.html" type="button"
-                    class="self-center ml-4 text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 bg-osis focus:ring-blue-800">Login</a>
+                <button type="button"
+                    class="self-center ml-4 text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 bg-osis focus:ring-blue-800">Login</button>
             </div>
             <div class="font-bold items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
                 id="navbar-sticky">
                 <ul
                     class="flex flex-col p-4 mt-4 border border-osis-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 ">
                     <li>
-                        <a href="/"
+                        <a href="#"
                             class="block py-2 pl-3 pr-4 text-white bg-mpk rounded md:bg-transparent text-mpk-50 md:p-0"
                             aria-current="page">Home</a>
                     </li>
@@ -37,10 +39,10 @@
                         <a href="#" class="link-nav">Event</a>
                     </li>
                     <li>
-                        <a href="../galeri/index.html" class="link-nav">Galeri</a>
+                        <a href="./galeri/index.html" class="link-nav">Galeri</a>
                     </li>
                     <li>
-                        <a href="../pengurus/index.html" class="link-nav">Pengurus MOSANSA</a>
+                        <a href="./pengurus/index.html" class="link-nav">Pengurus MOSANSA</a>
                     </li>
                 </ul>
             </div>
@@ -48,39 +50,47 @@
     </nav>
 </header>
 
-<body class="pt-12 h-min-screen">
-    <!-- <section class="w-full pt-10 min-h-screen bg-cover bg-center" style="background-image: url('../assets/img/background.jpg')" id="data-struktur">
-
-    </section> -->
-    <section class="min-h-screen">
-        <div class="relative" style="background-image: url('../assets/img/background.jpg')" id="data-struktur">
+<body class="pt-14 text-white bg-mpk">
+    <div class="min-h-screen" id="wrapper">
+        <div class="card mt-60 lg:w-96 w-72 m-auto bg-osis shadow-xl">
+            <div class="form-control m-auto mt-12 rounded-xl">
+                <label class="input-group bg-mpk">
+                  <span class="bg-mpk-600">Username</span>
+                  <input type="text" id="username" placeholder="Username" class="bg-mpk lg:w-auto w-40 input input-bordered" />
+                </label>
+              </div>
+                <div class="form-control m-auto mt-8 rounded-xl">
+                    <label class="input-group bg-mpk">
+                    <span class="bg-mpk-600">Password</span>
+                    <input type="password" id="password" placeholder="Password" class="bg-mpk lg:w-auto w-40 input input-bordered" />
+                    </label>
+                </div>
+                <div class="form-control m-auto mt-12 rounded-xl">
+                    <button class="btn btn-primary bg-mpk hover:bg-mpk-200" onclick="login()">Login</button>
+                </div>
+            <div class="card-body">
+              <h2 class="card-title">
+                Login Galeri
+              </h2>
+              <p>Login hanya diperlukan untuk edit Galeri</p>
+            </div>
         </div>
-    </section>
-
+    </div>
     <button data-collapse-toggle="navbar-sticky" type="button"
-        class="fixed bottom-0 inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-        aria-controls="navbar-sticky" aria-expanded="false">
-        <span class="sr-only">Open main menu</span>
-        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clip-rule="evenodd"></path>
-        </svg>
-    </button>
-
-    <!-- <script src="../../node_modules/aos/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script> -->
-    <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
-    <script>
-        new PureCounter();
-    </script>
+    class="fixed bottom-0 inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+    aria-controls="navbar-sticky" aria-expanded="false">
+    <span class="sr-only">Open main menu</span>
+    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"></path>
+    </svg>
+</button>
 </body>
 <footer class="footer bg-osis text-white border-osis-100 p-10 text-neutral-content">
     <div>
-        <img src="../assets/img/mo.png" width="75">
+        <img src="./assets/img/mo.png" width="75">
         <span class="text-lg font-bold">MPK-OSIS SMAN 1 Cikampek</span>
     </div>
     <div>
@@ -96,18 +106,8 @@
     </div>
 </footer>
 
-<div class="hidden PLACEHOLDER">
-  <div class="grid lg:grid-rows-2 h-[50vh] grid-rows-1 gap-4 h-screen overflow-x-scroll grid-flow-col">
-    <span class="text-lg">Angkatan</span>
-</div>
-    <div class="grid pt-24 grid-cols-2  gap-4 z-1">
-        <div class="card lg:w-96 w-80 bg-base-100 shadow-xl m-auto">
-            <div class="card-body items-center text-center">
-                <h2 class="card-title pt-12">${nama}</h2>
-                <p>${tipe} ${angkatan}</p>
-            </div>
-        </div>
-    </div>
+<div class="hidden bg-primary w-96" id="placeholder">
+
 </div>
 
 </html>

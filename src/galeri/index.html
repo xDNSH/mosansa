@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <script src="../../node_modules/flowbite/dist/flowbite.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
-    <script src="../assets/js/pengurus.js" defer></script>
+    <script src="../assets/js/galeri.js" defer></script>
 </head>
 <header>
     <nav
@@ -21,7 +21,7 @@
                 <span class="self-center text-xl font-semibold whitespace-nowrap text-white">MOSANSA</span>
             </a>
             <div class="flex md:order-2">
-                <a href="../login.html" type="button"
+                <a type="button" href="../login.html"
                     class="self-center ml-4 text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 bg-osis focus:ring-blue-800">Login</a>
             </div>
             <div class="font-bold items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
@@ -37,7 +37,7 @@
                         <a href="#" class="link-nav">Event</a>
                     </li>
                     <li>
-                        <a href="../galeri/index.html" class="link-nav">Galeri</a>
+                        <a href="#" class="link-nav">Galeri</a>
                     </li>
                     <li>
                         <a href="../pengurus/index.html" class="link-nav">Pengurus MOSANSA</a>
@@ -48,14 +48,24 @@
     </nav>
 </header>
 
-<body class="pt-12 h-min-screen">
-    <!-- <section class="w-full pt-10 min-h-screen bg-cover bg-center" style="background-image: url('../assets/img/background.jpg')" id="data-struktur">
-
-    </section> -->
-    <section class="min-h-screen">
-        <div class="relative" style="background-image: url('../assets/img/background.jpg')" id="data-struktur">
+<body class="pt-12">
+    <div class="min-h-screen bg-mpk" id="wrapper">
+        <div id="user" class="hidden max-w-screen-lg bg-osis-500 shadow-2xl rounded-lg mx-auto text-center py-12 mt-4">
+            <h2 id="name" class="text-3xl leading-9 font-bold tracking-tight text-white sm:text-4xl sm:leading-10">
+                Start studying with us
+            </h2>
+            <div class="mt-8 flex justify-center">
+                <div class="inline-flex rounded-md bg-white shadow">
+                    <a href="./addImage.html" class="text-gray-700 font-bold py-2 px-6">
+                        Tambahkan Galeri
+                    </a>
+                </div>
+            </div>
         </div>
-    </section>
+
+        <div id="grid-galeri" class="w-[90%] m-auto place-items-center place-content-center mt-12 grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-y-4">
+        </div>
+    </div>
 
     <button data-collapse-toggle="navbar-sticky" type="button"
         class="fixed bottom-0 inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -69,10 +79,10 @@
         </svg>
     </button>
 
-    <!-- <script src="../../node_modules/aos/dist/aos.js"></script>
+    <script src="../../node_modules/aos/dist/aos.js"></script>
     <script>
         AOS.init();
-    </script> -->
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
     <script>
         new PureCounter();
@@ -97,17 +107,39 @@
 </footer>
 
 <div class="hidden PLACEHOLDER">
-  <div class="grid lg:grid-rows-2 h-[50vh] grid-rows-1 gap-4 h-screen overflow-x-scroll grid-flow-col">
-    <span class="text-lg">Angkatan</span>
-</div>
-    <div class="grid pt-24 grid-cols-2  gap-4 z-1">
-        <div class="card lg:w-96 w-80 bg-base-100 shadow-xl m-auto">
-            <div class="card-body items-center text-center">
-                <h2 class="card-title pt-12">${nama}</h2>
-                <p>${tipe} ${angkatan}</p>
-            </div>
+    <div class="card card-compact w-96 bg-base-100 shadow-xl">
+        <figure><img alt="Shoes" /></figure>
+        <div class="card-body">
+          <h2 class="card-title">Shoes!</h2>
+          <p>If a dog chews shoes whose shoes does he choose?</p>
+          <div class="card-actions justify-end">
+            <button class="btn btn-primary">Buy Now</button>
+          </div>
         </div>
-    </div>
+      </div>
+      <div class="card w-96 h-40 bg-base-100 shadow-xl image-full">
+        <figure><img class="h-40"  alt="Shoes" /></figure>
+        <div class="card-body">
+          <h2 class="card-title">${json.namaAcara}</h2>
+          <p>Tanggal ${(new Date(json.tanggal)).toLocaleDateString('en-GB')}</p>
+          <div class="card-actions justify-end">
+            <button class="btn btn-primary">Buka</button>
+          </div>
+        </div>
+      </div>
+      <div class="card w-96 h-40 bg-base-100 shadow-xl">
+        <div class="relative h-full">
+          <img class="absolute inset-0 object-cover object-center w-full h-full"  />
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">${json.namaAcara}</h2>
+          <p>Tanggal ${(new Date(json.tanggal)).toLocaleDateString('en-GB')}</p>
+          <div class="card-actions justify-end">
+            <button class="btn btn-primary">Buka</button>
+          </div>
+        </div>
+      </div>
+      
 </div>
 
 </html>

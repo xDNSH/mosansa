@@ -42,7 +42,7 @@ async function main() {
       </div>
   </div>`;
     }
-	}
+	} 
   document.querySelector("#pengurus-mpk > #data-struktur").innerHTML += htmlmpk;
   const swiper2 = new Swiper("#pengurus-mpk", {
     speed: 600,
