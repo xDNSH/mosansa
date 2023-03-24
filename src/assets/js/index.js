@@ -1,5 +1,4 @@
-
-
+let api = "https://mosansa-api.vercel.app/"
 
 async function main() {
 	const response = await fetch(
@@ -146,6 +145,106 @@ async function load(data) {
 
 </div>
 `
+}
+
+function getDriveIdFromUrl(url) {
+  // Extract the file ID from the URL
+  const match = url.match(/\/([a-zA-Z0-9_-]{25,})/);
+  if (match) {
+    return match[1];
+  } else {
+    return null;
+  }
+}
+Galeri()
+async function Galeri(){
+    console.log("Loading Data")
+    let res = await fetch(api + "api/allFolders");
+    let data = await res.json();
+    console.log(data.message)
+    if (data.status === 200) {
+    data.message = data.message.sort((a,b) => new Date(b.tanggal) - new Date(a.tanggal))
+    let html = ""
+        for (let i = 0; i < data.message.length; i++) {
+            let json = data.message[i]
+  
+              let folderId = getDriveIdFromUrl(json.url)
+              console.log(folderId)
+              let dataJson = await fetch(api + "api/getFiles",{
+                  method: "POST",
+                  headers: {
+                      "Content-Type": "application/json"
+                  },
+                  body: JSON.stringify({
+                      folderId
+                  })        
+              })
+              let dataImage = await dataJson.json()
+              console.log(dataImage)
+              // if dataImage.files[0].mimeType == "application/vnd.google-apps.folder", loop get files again
+              if(dataImage.files[0].mimeType == "application/vnd.google-apps.folder"){
+                  let dataJson = await fetch(api + "api/getFiles",{
+                      method: "POST",
+                      headers: {
+                          "Content-Type": "application/json"
+                      },
+                      body: JSON.stringify({
+                          folderId: dataImage.files[0].id
+                      })
+                  })
+                  dataImage = await dataJson.json()
+              }
+  
+              console.log(dataImage)
+              let preview = dataImage.files.find((e) => e.mimeType.startsWith("image/"))
+            html += `
+    <div class="swiper-slide flex w-96">
+    <div class="card w-96 bg-mpk shadow-xl m-auto">
+            <figure><img src="https://drive.google.com/uc?id=${preview.id}&export=download"/></figure>
+            <div class="card-body">
+              <h2 class="card-title">${json.namaAcara}</h2>
+              <p>${json.deskripsiAcara}</p>
+              <div class="card-actions justify-end">
+                <a class="btn btn-osis" href="./galeri/full.html?id=${json.idAcara}">Buka</a>
+              </div>
+            </div>
+          </div>
+          </div>
+          `
+          
+        }
+        document.querySelector("#galeri-slide").innerHTML += html 
+        const swiper = new Swiper("#galeriswip", {
+          speed: 600,
+          loop: true,
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: true,
+          },
+          slidesPerView: "auto",
+          pagination: {
+            el: "#galeriswip > .swiper-pagination",
+            type: "bullets",
+            clickable: true,
+          },
+          breakpoints: {
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+        
+            1200: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+          },
+          // Navigation arrows
+          navigation: {
+            nextEl: "#galeriswip > .swiper-button-next",
+            prevEl: "#galeriswip > .swiper-button-prev",
+          },
+        });
+    }
 }
 
 Berita()

@@ -72,6 +72,8 @@ async function loadData() {
     let res = await fetch(api + "api/allFolders");
     let data = await res.json();
     console.log(data.message)
+    // sort by date latest to oldest, by Date(data.message[i].tanggal)
+    data.message = data.message.sort((a,b) => new Date(b.tanggal) - new Date(a.tanggal))
     if (data.status === 200) {
         let table = document.getElementById("acara-table");
         let rows = "";
@@ -132,6 +134,7 @@ async function loadGrid(){
     let res = await fetch(api + "api/allFolders");
     let data = await res.json();
     console.log(data.message)
+    data.message = data.message.sort((a,b) => new Date(b.tanggal) - new Date(a.tanggal))
     if (data.status === 200) {
         for (let i = 0; i < data.message.length; i++) {
             let json = data.message[i]

@@ -8,9 +8,9 @@
     <title>MPK - OSIS SMAN 1 CIKAMPEK</title>
     <link rel="stylesheet" href="../assets/css/main.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <script src="../../node_modules/flowbite/dist/flowbite.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
     <script src="../assets/js/galeri.js" defer></script>
+    <script src="../../node_modules/flowbite/dist/flowbite.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/datepicker.min.js" defer></script>
 </head>
 <header>
@@ -30,7 +30,7 @@
                 <ul
                     class="flex flex-col p-4 mt-4 border border-osis-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 ">
                     <li>
-                        <a href="/"
+                        <a href="../index.html"
                             class="block py-2 pl-3 pr-4 text-white bg-mpk rounded md:bg-transparent text-mpk-50 md:p-0"
                             aria-current="page">Home</a>
                     </li>
@@ -49,13 +49,13 @@
     </nav>
 </header>
 
-<body class="pt-12">
-    <div class="min-h-screen" id="wrapper">
+<body class="overflow-x-hidden">
+    <div class="pt-12 bg-mpk min-h-screen text-white" id="wrapper">
         <div class="card mt-60 lg:w-96 w-72 m-auto bg-osis shadow-xl">
             <div class="form-control m-auto mt-12 rounded-xl w-[80%]">
                 <label class="input-group bg-mpk">
                   <span class="bg-mpk-600">Nama Acara</span>
-                  <input type="text" id="namaAcara" placeholder="Nama Acara" class="bg-mpk lg:w-auto w-40 input input-bordered" />
+                  <input type="text" id="namaAcara" placeholder="Nama Acara" class="w-[80%] bg-mpk  w-40 input input-bordered" />
                 </label>
               </div>
                 <div class="form-control m-auto mt-8 rounded-xl w-[80%]">
@@ -66,13 +66,13 @@
                     </div>
                     <label class="input-group bg-mpk">
                     <span class="bg-mpk-600">Link</span>
-                    <input type="text" id="link" placeholder="Link Drive" class="bg-mpk lg:w-auto w-40 input input-bordered" />
+                    <input type="text" id="link" placeholder="Link Drive" class="w-[80%] bg-mpk  w-40 input input-bordered" />
                     </label>
                 </div>
                 <div class="form-control m-auto mt-8 rounded-xl w-[80%]">
                     <label class="input-group bg-mpk">
                     <span class="bg-mpk-600">Deskripsi</span>
-                    <input type="text" id="deskripsi" placeholder="Deskripsi" class="overflow-x-hidden bg-mpk lg:w-auto w-40 input input-bordered" />
+                    <input type="text" id="deskripsi" placeholder="Deskripsi" class="w-[80%] overflow-x-hidden bg-mpk  w-40 input input-bordered" />
                     </label>
                 </div>
                 <div class="form-control m-auto mt-8 rounded-xl w-[80%]">
@@ -84,7 +84,7 @@
                     <label class="input-group bg-mpk">
                     <label class="input-group bg-mpk">
                     <span class="bg-mpk-600">Id Acara</span>
-                    <input type="text" id="idAcara" placeholder="ID acara" class="bg-mpk lg:w-auto w-40 input input-bordered" />
+                    <input type="text" id="idAcara" placeholder="ID acara" class="w-[80%] bg-mpk  w-40 input input-bordered" />
                     </label>
                 </div>
                 <div class="relative max-w-sm w-[80%] m-auto mt-12">
@@ -155,6 +155,14 @@
 </footer>
 
 <div class="hidden PLACEHOLDER">
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" data-tooltip="Click me for a tooltip!">
+        Click me!
+      </button>
+      <td class="px-4 py-2"><button data-tooltip-target="tooltip-${json.idAcara}" type="button" class="text-white bg-mpk-700 hover:bg-mpk-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-blue-800">Link</button>
+        <div id="tooltip-${json.idAcara}" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            ${json.url}
+            <div class="tooltip-arrow" data-popper-arrow></div>
+        </div></td>
     <a href="./fullData.html"></a>
 <div class="btn btn-primary"></div>
 </div>
