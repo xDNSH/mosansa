@@ -1,4 +1,4 @@
-let api = "https://moonlgh-orange-space-chainsaw-j94649gpgq6frq6-8080.preview.app.github.dev/"
+let api = "https://mosansa-api.vercel.app/"
 
 
 async function main(){
@@ -148,6 +148,7 @@ async function loadGrid(){
                 })        
             })
             let dataImage = await dataJson.json()
+            console.log(dataImage)
             // if dataImage.files[0].mimeType == "application/vnd.google-apps.folder", loop get files again
             if(dataImage.files[0].mimeType == "application/vnd.google-apps.folder"){
                 let dataJson = await fetch(api + "api/getFiles",{
@@ -168,13 +169,13 @@ async function loadGrid(){
             console.log(preview)
             let grid = document.getElementById("grid-galeri")
             grid.innerHTML += `
-            <div class="card w-96 mt-12 h-40 bg-base-100 shadow-xl image-full m-auto">
-  <figure><img class="h-40" src="https://drive.google.com/uc?id=${preview.id}&export=download" alt="Shoes" /></figure>
+            <div class="card w-96 mt-12 bg-base-100 shadow-xl image-full m-auto">
+  <figure><img src="https://drive.google.com/uc?id=${preview.id}&export=download" /></figure>
   <div class="card-body">
     <h2 class="card-title">${json.namaAcara}</h2>
     <p>Tanggal ${(new Date(json.tanggal)).toLocaleDateString('en-GB')}</p>
     <div class="card-actions justify-end">
-      <button class="btn btn-primary">Buka</button>
+      <a class="btn btn-primary" href="./fullData.html?id=${json.idAcara}">Buka</a>
     </div>
   </div>
 </div>

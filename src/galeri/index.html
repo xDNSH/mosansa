@@ -63,7 +63,7 @@
             </div>
         </div>
 
-        <div id="grid-galeri" class="w-[90%] m-auto place-items-center place-content-center mt-12 grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-y-4">
+        <div id="grid-galeri" class="w-[90%] m-auto place-items-center place-content-center mt-12 grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-y-4">
         </div>
     </div>
 
@@ -139,7 +139,15 @@
           </div>
         </div>
       </div>
-      
+      <div class="card w-96 mt-12 h-40 bg-base-100 shadow-xl image-full m-auto">
+        <div class="card-body">
+          <h2 class="card-title">${json.namaAcara}</h2>
+          <p>Tanggal ${(new Date(json.tanggal)).toLocaleDateString('en-GB')}</p>
+          <div class="card-actions justify-end">
+            <button class="btn btn-primary">Buka</button>
+          </div>
+        </div>
+      </div>
 </div>
 
 </html>

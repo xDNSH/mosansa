@@ -1,4 +1,4 @@
-let api = "https://moonlgh-orange-space-chainsaw-j94649gpgq6frq6-8080.preview.app.github.dev/"
+let api = "https://mosansa-api.vercel.app/"
 
 async function login(){
     let username = document.getElementById("username").value
