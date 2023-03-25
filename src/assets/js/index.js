@@ -263,7 +263,7 @@ async function Berita() {
             <img src="https://raw.githubusercontent.com/RPLSaci/featOsis-Event/main/events/${item.img}" class="rounded-xl" />
         </figure>
         <div class="card-body items-center text-center">
-            <a class="card-title" href="./event/baca?id=${item.id}">${item.nama}</a>
+            <a class="card-title" href="./event/fullData.html?id=${item.id}">${item.nama}</a>
         </div>
     </div>
 </div>`

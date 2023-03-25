@@ -18,3 +18,34 @@
 }
 
 
+@layer base {
+    h1 {
+      @apply text-5xl md:text-3xl;
+    }
+    h2 {
+      @apply text-4xl md:text-2xl;
+    }
+    h3 {
+      @apply text-3xl md:text-xl;
+    }
+    h4 {
+      @apply text-2xl md:text-lg ;
+    }
+    h5 {
+      @apply text-xl;
+    }
+    h6 {
+      @apply text-base;
+    }
+  }
+  
+  #main img {
+    height: 75%;
+    width: 75%;
+    margin:auto;
+  }
+  #main a {
+    font-weight: 800;
+  }
+
+
