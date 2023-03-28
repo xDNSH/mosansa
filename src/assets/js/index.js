@@ -300,3 +300,11 @@ async function Berita() {
     },
   });
 }
+Pilkasis()
+async function Pilkasis() {
+  const response = await fetch(
+		"https://raw.githubusercontent.com/RPLSaci/mosansa/main/data/pilkasis.json"
+	);
+  const data = await response.text();
+  console.log(JSON.parse(data))
+}
