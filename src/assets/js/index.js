@@ -205,7 +205,7 @@ async function Galeri(){
               <h2 class="card-title">${json.namaAcara}</h2>
               <p>${json.deskripsiAcara}</p>
               <div class="card-actions justify-end">
-                <a class="btn btn-osis" href="./galeri/full.html?id=${json.idAcara}">Buka</a>
+                <a class="btn btn-osis" href="./galeri/fullData.html?id=${json.idAcara}">Buka</a>
               </div>
             </div>
           </div>
