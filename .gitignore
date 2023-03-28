@@ -4,3 +4,6 @@ dist/
 node_modules
 package-lock.json
 **.lock
+kasaran.js
+akun.json
+rencana-akun.json
