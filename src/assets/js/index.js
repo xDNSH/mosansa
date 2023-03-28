@@ -199,7 +199,7 @@ async function Galeri(){
               let preview = dataImage.files.find((e) => e.mimeType.startsWith("image/"))
             html += `
     <div class="swiper-slide flex w-96">
-    <div class="card w-96 bg-mpk shadow-xl m-auto">
+    <div class="card w-96 bg-osis shadow-xl m-auto">
             <figure><img src="https://drive.google.com/uc?id=${preview.id}&export=download"/></figure>
             <div class="card-body">
               <h2 class="card-title">${json.namaAcara}</h2>
@@ -258,7 +258,7 @@ async function Berita() {
     console.log(item)
     html+=`
     <div class="swiper-slide flex w-96">
-    <div class="card w-96 bg-osis shadow-xl m-auto">
+    <div class="card w-96 bg-mpk shadow-xl m-auto">
         <figure class="">
             <img src="https://raw.githubusercontent.com/RPLSaci/featOsis-Event/main/events/${item.img}" class="rounded-xl" />
         </figure>
@@ -305,6 +305,13 @@ async function Pilkasis() {
   const response = await fetch(
 		"https://raw.githubusercontent.com/RPLSaci/mosansa/main/data/pilkasis.json"
 	);
-  const data = await response.text();
-  console.log(JSON.parse(data))
+  const data = await response.json()
+
+  if(data.status === true) {
+    let element = document.querySelector("#status")
+    element.innerHTML = "Pemilihan Ketua MPK OSIS Sedang Berlangsung"
+  } else {
+    let element = document.querySelector("#status")
+    element.innerHTML = "Pemilihan Ketua MPK OSIS Sedang tidak Berlangsung"
+  }
 }
