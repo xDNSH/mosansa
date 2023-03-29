@@ -119,7 +119,7 @@ async function load(data) {
   let ammoutOsis = data.filter((a) => a.includes("OSIS")).length
   let masabakti = (new Date().getFullYear() - 1) + " - " + new Date().getFullYear()
   document.querySelector("#info").innerHTML +=`
-  <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4">
+  <div class="grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-2 gap-4">
   <div class="text-center p-4">
       <span class="block text-4xl font-bold">${masabakti}</span>
       <p class="text-base">Masa Bakti</p>
