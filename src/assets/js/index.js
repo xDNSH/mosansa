@@ -196,7 +196,7 @@ async function Galeri(){
               }
   
               console.log(dataImage)
-              let preview = dataImage.files.find((e) => e.mimeType.startsWith("image/"))
+              let preview = dataImage.files.find((e) => e.mimeType.startsWith("image/jpeg"))
             html += `
     <div class="swiper-slide flex w-96">
     <div class="card w-96 bg-osis shadow-xl m-auto">

@@ -167,7 +167,7 @@ async function loadGrid(){
             }
 
             console.log(dataImage)
-            let preview = dataImage.files.find((e) => e.mimeType.startsWith("image/"))
+            let preview = dataImage.files.find((e) => e.mimeType.startsWith("image/jpeg"))
 
             console.log(preview)
             let grid = document.getElementById("grid-galeri")
