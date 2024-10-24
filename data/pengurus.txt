@@ -1,5 +1,6 @@
+
 // di bawah adalah konfig untuk website
--- DATA-SHOW-INTI-59 --
+-- DATA-SHOW-INTI-61 --
 
 Rafly Rhafael - MPK - 59 - Ketua
 Aleza Zafira Fathi Rofi - MPK - 59 - Wakil Ketua
@@ -79,3 +80,43 @@ Yuniar Herlina Arosa - OSIS - 60
 Arini Nurul Anggraeni - OSIS - 60
 Cut Marzatillah Salda Risna - OSIS - 60
 Nadhifa Najwa Keisya Andini - OSIS - 60
+
+--SEPERATOR ANGKATAN--
+
+Arnelita Dwi Putriya Suparno - MPK - 61 - Ketua
+Ratu Mayzan Savaira Rizqin - MPK - 61 - Wakil Ketua
+Hijriyani Mardhotillah - MPK - 61
+Lionel Christian Haryanto - MPK - 61
+Raisha Aulia Rahma - MPK - 61
+Agnes Julianita Putri - MPK - 61
+Muhamad Fairuz Fadilah - MPK - 61
+Andini Fitri Khoirunisa - MPK - 61
+Zahra Deswita X-E MPK - 61
+Rayhan Nabil Syakil Jaenul Putra - MPK - 61
+Aisha Anindya Humaira - MPK - 61
+Zahrah Permata Supardi Gito. M - MPK - 61
+Essenza Qur'anique Wiratmaja X-H MPK - 61
+Jasmine Oky Subagja - MPK - 61
+Lulu Lestari - MPK - 61
+Diandra Putri Ariesta - MPK - 61
+Tina Maribela Falez - MPK - 61
+
+Lee Ghar Mahesa Jalurosa - OSIS - 61 - Ketua
+Muhammad Ival Ardatta - OSIS - 61 - Wakil ketua
+Danish Yafi Ahmad - OSIS - 61
+Saut Marvel Hangoluan. N - OSIS - 61
+Salma Rizki Budiman - OSIS - 61
+Sarah Nauly Hanifah  - OSIS - 61
+Pelangi Ayu Fadila - OSIS - 61
+Sekar Azzahra Rahmasari S. - OSIS - 61
+Syafira Syeikha - OSIS - 61
+Hiro Admadi Najed - OSIS - 61
+Shella Amelia Aprelia Cahyani - OSIS - 61
+Alfin Nugraha Syahputra - OSIS - 61
+Irmadewanti Ananta Hilmy - OSIS - 61
+Seli Nur Aulia - OSIS - 61
+Meylani Davina Cristianty Sirait - OSIS - 61
+Angelika Adinda Putri - OSIS - 61
+Jihan Nur Aini - OSIS - 61
+Altaqirani Farchannaima Zannata - OSIS - 61
+Naufal Febrian - OSIS - 61
