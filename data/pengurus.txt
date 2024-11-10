@@ -1,45 +1,5 @@
 // di bawah adalah konfig untuk website
--- DATA-SHOW-INTI-59 --
-
-Rafly Rhafael - MPK - 59 - Ketua
-Aleza Zafira Fathi Rofi - MPK - 59 - Wakil Ketua
-Galuh Putriana Alicia - MPK - 59 - Sekretaris
-Najla Haura Hafizah - MPK - 59 - Seketaris
-Vania Marshandika Izzati - MPK - 59 - Bendahara
-Ghaitsa Jahira Sofa - MPK - 59 - Bendahara 
-Livia Aulianti Azahra - MPK - 59 
-Alya Mira Asahy - MPK - 59
-Tabina Marissa Putri - MPK - 59 
-Shofiyanti Qolbi - MPK - 59
-Chelsea Meilani Limbong - MPK - 59
-Nasywa Dyah Andani - MPK - 59
-Gita Putri Dinargintana - MPK - 59
-Tia Nopiyanti - MPK - 59
-Muhamad Riky Suryadi - MPK - 59 
-Laely Asyahidah - MPK - 59
-Gilang Septa Aryadi - MPK - 59
-
-Chatrine Cahaya Mykino - OSIS - 59 - Ketua
-Arya Rizki Rahmatuloh - OSIS - 59 - Wakil Ketua
-Tedy Kusuma Hidayat - OSIS - 59 - Sekretaris
-Aurellityas Ar Rahmat - OSIS - 59 - Sekretaris
-Tifani Azahra - OSIS - 59 - Bendahara
-Anisa Dinda Suteja - OSIS - 59 - Bendahara
-Ahmad Hidayat Rifki - OSIS - 59 
-Ahmad Nikolas Adiputra - OSIS - 59 
-Audrey Widya Anjani Devi - OSIS - 59 
-Fitri Nuradila - OSIS - 59 
-Melinda Handayani - OSIS - 59 
-Nur Aulia fitri - OSIS - 59 
-Raditya Erlangga Ekaputra W - OSIS - 59 
-Regita Aulia Sa'adah - OSIS - 59 
-Salshabila Azara Putri  - OSIS - 59 
-Silvi Indriani Alfriadi - OSIS - 59 
-Siti Balqis Haura - OSIS - 59 
-Thofa Hanif Aditya - OSIS - 59 
-Muhammad Alif Dimas Putra - OSIS - 59 
-
---SEPERATOR ANGKATAN--
+-- DATA-SHOW-INTI-60 --
 
 Sauqie Ahmad - MPK - 60
 Cantika Fauziah - MPK - 60
@@ -79,3 +39,44 @@ Yuniar Herlina Arosa - OSIS - 60
 Arini Nurul Anggraeni - OSIS - 60
 Cut Marzatillah Salda Risna - OSIS - 60
 Nadhifa Najwa Keisya Andini - OSIS - 60
+
+--SEPERATOR ANGKATAN--
+
+Arnelita Dwi Putriya Suparno - MPK - 61 - Ketua
+Ratu Mayzan Savaira Rizqin - MPK - 61 - Wakil Ketua
+Agnes Julianita Putri - MPK - 61
+Aisha Anindya Humaira - MPK - 61
+Andini Fitri Khoirunisa - MPK - 61
+Diandra Putri Ariesta - MPK - 61
+Essenza Qur'anique Wiratmaja - MPK - 61
+Hijriyani Mardhotillah - MPK - 61
+Jasmine Oky Subagja - MPK - 61
+Lionel Christian Haryanto - MPK - 61
+Lulu Lestari - MPK - 61
+Muhamad Fairuz Fadilah - MPK - 61
+Raisha Aulia Rahma - MPK - 61
+Rayhan Nabil Syakil Jaenul Putra - MPK - 61
+Tina Maribela Falez - MPK - 61
+Zahra Deswita - MPK - 61
+Zahrah Permata Supardi Gito - MPK - 61
+
+Muhammad Ival Ardatta - OSIS - 61 - Ketua
+Sekar Azzahra Rahmasari S. - OSIS - 61 - Sekretaris
+Irmadewanti Ananta Hilmy - OSIS - 61 - Sekretaris
+Angelika Adinda Putri - OSIS - 61 - Bendahara
+Reiska Aprelia Cahyani - OSIS - 61 - Bendahara
+Alfin Nugraha Syahputra - OSIS - 61
+Altaqirani Farchannaima Zannata - OSIS - 61
+Danish Yafi Ahmad - OSIS - 61
+Hiro Admadi Najed - OSIS - 61
+Jihan Nur Aini - OSIS - 61
+Lee Ghar Mahesa Jalurosa - OSIS - 61
+Meylani Davina Cristianty Sirait - OSIS - 61
+Naufal Febrian - OSIS - 61
+Pelangi Ayu Fadila - OSIS - 61
+Salma Rizki Budiman - OSIS - 61
+Sarah Nauly Hanifah - OSIS - 61
+Saut Marvel Hangoluan - OSIS - 61
+Seli Nur Aulia - OSIS - 61
+Shella Amelia - OSIS - 61
+Syafira Syeikha - OSIS - 61
